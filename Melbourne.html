@@ -208,8 +208,7 @@
       var map = L.mapbox.map('map', 'lmavicgovau.jf07o7k9', {
         maxBounds: bounds,
         maxZoom: maxZoom,
-        minZoom: minZoom,
-        zoom   : mediumZoom
+        minZoom: minZoom
       });
 	  
 	  
@@ -361,7 +360,7 @@
       }
       
        if(L.Browser.mobile || L.Browser.touch) {
-
+			map.setView(map.getCenter(), 10);
 		} else {
 			L.control.fullscreen().addTo(map);
 		}
