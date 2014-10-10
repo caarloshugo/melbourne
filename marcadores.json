@@ -1,0 +1,33 @@
+var marcadores_15 = [{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "title": "Tunnel ventilation Eastern", "marker-size": "medium", "marker-symbol": "monument", "marker-color": "#BAD982", "images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]] }, "geometry": { "type": "Point", "coordinates": [144.9894, -37.7943 ] } },
+{ "type": "Feature", "properties": { "title": "Tunnel ventilation western",  "marker-size": "medium", "marker-symbol": "monument", "marker-color": "#BAD982", "images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]] }, "geometry": { "type": "Point", "coordinates": [144.9452, -37.7852] } },
+{ "type": "Feature", "properties": { "title": "Eastern tunnel portal",  "marker-size": "medium", "marker-symbol": "marker-stroked",
+"marker-color": "#E6B711", "images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]] }, "geometry": { "type": "Point", "coordinates": [144.9918, -37.795] } },
+{ "type": "Feature", "properties": { "title": "Western tunnel portal", "marker-size": "medium", "marker-symbol": "marker-stroked",
+"marker-color": "#E6B711", "images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]] }, "geometry": { "type": "Point", "coordinates": [144.9445, -37.7849] } }
+]
+}];
+
+var marcadores_16 = [{
+"type": "FeatureCollection",
+"features": [{ 
+	"type": "Feature", 
+	"properties": { 
+		"title": "Hoddle St", 
+		"marker-size": "medium",
+		"marker-symbol": "camera", 
+		"marker-color": "#4789A2",
+		"images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]]
+	}, 
+	"geometry": { 
+		"type": "Point", 
+		"coordinates": 
+			[144.993369,-37.795227 ] 
+		} 
+	},
+	{ "type": "Feature", "properties": { "title": "Construction sidetrack", "marker-size": "medium","marker-symbol": "camera","marker-color": "#4789A2", "images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]] }, "geometry": { "type": "Point", "coordinates": [144.9879, -37.7937] } },
+	{ "type": "Feature", "properties": { "title": "Ormond Road", "marker-size": "medium", "marker-symbol": "camera", "marker-color": "#4789A2", "images": [["131218-EWL.jpg"], ["https://i.imgur.com/exemdwr.png"], ["131218-EWL.jpg"]]}, "geometry": { "type": "Point", "coordinates": [144.936, -37.773995] } }
+	]
+}];
