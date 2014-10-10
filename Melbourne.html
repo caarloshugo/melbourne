@@ -358,15 +358,15 @@
         if(markers_16)
           map.removeLayer(markers_16)
       }
-      
-       if(L.Browser.mobile || L.Browser.touch) {
-			map.setView(map.getCenter(), 19);
-		} else {
-			L.control.fullscreen().addTo(map);
-		}
     });
 
-
+	
+	if(L.Browser.mobile || L.Browser.touch) {
+		map.setView(map.getCenter(), 19);
+	} else {
+		L.control.fullscreen().addTo(map);
+	}
+		
     L.easyPrint().addTo(map);
   }
 
