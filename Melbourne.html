@@ -208,9 +208,11 @@
       var map = L.mapbox.map('map', 'lmavicgovau.jf07o7k9', {
         maxBounds: bounds,
         maxZoom: maxZoom,
-        minZoom: minZoom
+        minZoom: minZoom,
+        zoom   : mediumZoom
       });
-
+	  
+	  
       map.legendControl.addLegend(document.getElementById('legend').innerHTML);
       
       map.fitBounds(bounds);
@@ -359,14 +361,14 @@
       }
       
        if(L.Browser.mobile || L.Browser.touch) {
-			
+			map.setView(loc, mediumZoom);
+			.setView([40, -75], 9);
 		} else {
 			L.control.fullscreen().addTo(map);
 		}
     });
 
-   
-    
+
     L.easyPrint().addTo(map);
   }
 
