@@ -166,10 +166,13 @@
 		$('.menu-ui').css('bottom', '29px');
 		$('.menu-ui').css('width', '30%');
 		$('.menu-ui a').css('padding', '6px');
+		
+		var southWest = L.latLng(-37.86862005954325,144.8773956298828); 
 	} else {
 		var maxZoom    = 20;
 		var minZoom    = 14;
 		var mediumZoom = 17;
+		var southWest = L.latLng(-37.815994,144.880101);
 	}
 	
     navigator.sayswho= (function(){
@@ -201,8 +204,6 @@
 
       L.mapbox.accessToken = 'pk.eyJ1Ijoic2ViYXN0aWVuYnUiLCJhIjoiRGdzdURkMCJ9.qsQO_te8DOfquGaSxKxcAw';
       var northEast = L.latLng(-37.760717,145.035041);
-      var southWest = L.latLng(-37.86862005954325,144.8773956298828);
-    
       bounds = L.latLngBounds(southWest, northEast);
 	  
       var map = L.mapbox.map('map', 'lmavicgovau.jf07o7k9', {
