@@ -6,10 +6,10 @@
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
   <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-  <script src='print/jQuery.print.js'></script>
-  <script src='print/leaflet.easyPrint.js'></script>
+  <!--<<script src='print/jQuery.print.js'></script>
+  <script src='print/leaflet.easyPrint.js'></script>-->
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
-  <link href='print/easyPrint.css' rel="stylesheet"</>
+  <!--<<link href='print/easyPrint.css' rel="stylesheet"/>-->
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -134,7 +134,7 @@
     <a href='#' data-position='-37.795227,144.993369'>Hoddle St</a> <!-- -->
     <a href='#' data-position='-37.784838,144.939698'>CityLink</a>
     <a href='#' data-position='-37.773995,144.936'>Ormond Road</a>
-    <a href='#' data-info='reset' data-position='-37.78716666399619,144.9573040008545' reset='-37.773995,144.935884'>Reset</a>
+    <a href='#' data-info='reset' id='reset' name='reset' data-position='-37.78716666399619,144.9573040008545' reset='-37.773995,144.935884'>Reset</a>
   </div>
 
   <div class='map-legends' id="legend">
@@ -225,8 +225,25 @@
         "Aerial map": aerialMap
       };
 
-      L.control.layers(layers, null, {collapsed: false}).addTo(map);   
+      L.control.layers(layers, null, {collapsed: false}).addTo(map); 
+        
+	  $("a").click(function(){  
+        var info = $(this).attr("data-info");        
+        var pos = $(this).attr("data-position");        
+        
+        var loc = pos.split(',');
+        //map.setView(loc, 17);
 
+        if (info == 'reset'){
+          
+          map.setView(loc, 14); 
+        }else{          
+            map.setView(loc, 17); 
+        }
+
+      });
+      
+      /*
       document.getElementById('navigation').onclick = function(e) {
         e.preventDefault();
         var pos = e.target.getAttribute('data-position');
@@ -239,7 +256,8 @@
           map.setView(loc, minZoom);        
         }
       }
-
+	  */
+	  
       var markers_15;
       var markers_16;
 
@@ -368,7 +386,7 @@
 		L.control.fullscreen().addTo(map);
 	}
 		
-    L.easyPrint().addTo(map);
+    //L.easyPrint().addTo(map);
   }
 
     
