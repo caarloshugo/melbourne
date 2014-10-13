@@ -149,7 +149,17 @@
   </div>
   
   <script>
-	if(L.Browser.mobile) {
+	var iPad = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
+	
+	var maxZoom    = 20;
+	var minZoom    = 14;
+	var mediumZoom = 17;
+	var southWest = L.latLng(-37.815994,144.880101);
+	var northEast = L.latLng(-37.760717,145.035041);
+		
+	if(iPad == true) {
+	
+	} else if(L.Browser.mobile) {
 		var maxZoom    = 20;
 		var minZoom    = 11;
 		var mediumZoom = 15;
