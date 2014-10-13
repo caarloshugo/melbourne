@@ -149,7 +149,7 @@
   </div>
   
   <script>
-	if(L.Browser.mobile || L.Browser.touch) {
+	if(L.Browser.mobile) {
 		var maxZoom    = 20;
 		var minZoom    = 11;
 		var mediumZoom = 15;
@@ -381,7 +381,7 @@
     });
 
 	
-	if(L.Browser.mobile || L.Browser.touch) {
+	if(L.Browser.mobile) {
 		map.setView([-37.80900000,144.96601581573486], 12);
 	} else {
 		L.control.fullscreen().addTo(map);
