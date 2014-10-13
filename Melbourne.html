@@ -245,10 +245,17 @@
         var loc = pos.split(',');
         //map.setView(loc, 17);
 
-        if (info == 'reset'){
-          
-          map.setView(loc, 14); 
-        }else{          
+        if(info == 'reset') {
+			if(L.Browser.mobile) {
+				if(iPad == true) {
+					map.setView(loc, 14);
+				} else {
+					map.setView([-37.80900000,144.96601581573486], 12);
+				}
+			} else {
+				map.setView(loc, 14);
+			}
+        } else {          
             map.setView(loc, 17); 
         }
 
